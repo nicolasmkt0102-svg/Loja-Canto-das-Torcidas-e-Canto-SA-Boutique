@@ -1,513 +1,376 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-<title>Canto SA Boutique &amp; Canto das Torcidas | Cáceres-MT</title>
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- Google Fonts: Playfair Display & Inter -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
-<!-- Font Awesome para ícones consistentes -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canto SA Boutique & Canto das Torcidas | Cáceres-MT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
             serif: ['"Playfair Display"', 'serif'],
-            sans: ['"Inter"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
           },
           colors: {
-            primary: {
-              DEFAULT: '#b5474c',
-              dark: '#933539',
-              light: '#f9e8e9',
-            },
-            surface: {
-              DEFAULT: '#fff8f7',
-              dim: '#eed4d5',
-              container: '#fff0f0'
+            brand: {
+              maroon: '#b5474c',
+              darkMaroon: '#8c2f34',
+              cream: '#fff8f7',
+              sand: '#f7eee9',
+              dark: '#1e1b1b',
             }
           }
         }
       }
     }
   </script>
-<style>
-    body {
-      background-color: #f3ede9;
-      font-family: 'Inter', sans-serif;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .hide-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .hide-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .screen-view {
-      display: none;
-    }
-    .screen-view.active {
-      display: block;
-      animation: fadeIn 0.25s ease-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .page-view { transition: opacity 0.2s ease-in-out; }
   </style>
 </head>
-<body class="flex justify-center min-h-screen bg-stone-200 antialiased selection:bg-primary-light selection:text-primary">
-<!-- Mobile Frame Container (Responsivo: visual de app no desktop e tela cheia nativa no celular) -->
-<main class="w-full max-w-[430px] min-h-screen bg-[#fff8f7] text-[#2b2424] relative shadow-2xl flex flex-col justify-between">
-<!-- ========================================== -->
-<!-- TELA 1: HUB INICIAL DE ESCOLHA            -->
-<!-- ========================================== -->
-<div class="screen-view active p-5 pb-10 flex flex-col justify-between min-h-screen" id="screen-hub">
-<div>
-<!-- Badge Localização -->
-<div class="flex justify-center mt-3 mb-6">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#fce8e8] text-[#b5474c] text-xs font-semibold tracking-wide uppercase shadow-sm">
-<i class="fa-solid fa-location-dot"></i>
-<span>Canto • Cáceres-MT</span>
-</div>
-</div>
-<!-- Título e Subtítulo -->
-<div class="text-center mb-8 px-2">
-<h1 class="font-serif text-[34px] leading-[1.15] text-[#933539] font-bold tracking-tight mb-2">
-            O que você procura hoje?
-          </h1>
-<p class="text-sm text-stone-600 font-normal leading-relaxed max-w-xs mx-auto">
-            Escolha o seu lado e veja as novidades e coleções que preparamos para você.
-          </p>
-</div>
-<!-- Cards de Seleção -->
-<div class="space-y-5">
-<!-- CARD 1: Canto SA Boutique (Feminino) -->
-<div class="group relative bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-stone-100 transition-all duration-300 cursor-pointer active:scale-[0.98]" onclick="navigateTo('screen-feminino')">
-<div class="h-56 w-full relative overflow-hidden bg-stone-100">
-<img alt="Canto SA Boutique Moda Feminina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-<span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-stone-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                Moda Feminina
-              </span>
-<div class="absolute bottom-4 left-4 right-4 text-white">
-<h2 class="font-serif text-2xl font-bold leading-tight">Canto SA Boutique</h2>
-<p class="text-xs text-stone-200 mt-1 line-clamp-1">Curadoria exclusiva, vestidos fluidos, alfaiataria e elegância.</p>
-</div>
-</div>
-<div class="p-4 bg-white flex items-center justify-between">
-<span class="text-xs font-semibold text-stone-500">Toque para explorar catálogo</span>
-<button class="bg-[#b5474c] hover:bg-[#933539] text-white text-xs font-bold px-4 py-2.5 rounded-full flex items-center gap-2 shadow-sm transition-colors">
-<span>Entrar no Espaço</span>
-<i class="fa-solid fa-arrow-right text-[10px]"></i>
-</button>
-</div>
-</div>
-<!-- CARD 2: Canto das Torcidas (Masculino & Mantos) -->
-<div class="group relative bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-stone-100 transition-all duration-300 cursor-pointer active:scale-[0.98]" onclick="navigateTo('screen-masculino')">
-<div class="h-56 w-full relative overflow-hidden bg-stone-100">
-<img alt="Canto das Torcidas Moda Masculina e Mantos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-<span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-stone-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                Mantos &amp; Masculino
-              </span>
-<div class="absolute bottom-4 left-4 right-4 text-white">
-<h2 class="font-sans text-2xl font-extrabold tracking-tight leading-tight">Canto das Torcidas</h2>
-<p class="text-xs text-stone-200 mt-1 line-clamp-1">Camisas oficiais de times, John John, Acostamento e moda urbana.</p>
-</div>
-</div>
-<div class="p-4 bg-white flex items-center justify-between">
-<span class="text-xs font-semibold text-stone-500">Toque para ver mantos</span>
-<button class="bg-[#b5474c] hover:bg-[#933539] text-white text-xs font-bold px-4 py-2.5 rounded-full flex items-center gap-2 shadow-sm transition-colors">
-<span>Entrar no Espaço</span>
-<i class="fa-solid fa-arrow-right text-[10px]"></i>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Rodapé Informativo Tela 1 -->
-<footer class="mt-8 text-center pt-4 border-t border-stone-200/60">
-<div class="inline-flex items-center gap-2 text-xs font-medium text-emerald-700 mb-1 bg-emerald-50 px-3 py-1 rounded-full">
-<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Aberto hoje até às 18h
-        </div>
-<p class="text-[11px] text-stone-500 mt-1">R. Cel. Faria, 755 • Centro • Cáceres-MT</p>
-</footer>
-</div>
-<!-- ========================================== -->
-<!-- TELA 2: CANTO SA BOUTIQUE (FEMININA)      -->
-<!-- ========================================== -->
-<div class="screen-view pb-24" id="screen-feminino">
-<!-- Top Bar com Atalho Voltar -->
-<header class="sticky top-0 z-30 bg-[#fff8f7]/90 backdrop-blur-md px-5 py-3.5 border-b border-[#eed4d5] flex items-center justify-between">
-<button class="text-xs font-bold text-[#b5474c] flex items-center gap-1.5 hover:underline active:scale-95 transition-all" onclick="navigateTo('screen-hub')">
-<i class="fa-solid fa-arrow-left"></i>
-<span>Trocar de loja</span>
-</button>
-<span class="text-xs font-bold tracking-widest uppercase text-stone-700 font-serif">Canto SA Boutique</span>
-<button class="w-8 h-8 rounded-full bg-[#fce8e8] text-[#b5474c] flex items-center justify-center text-xs shadow-sm" onclick="openWhatsApp('Olá! Gostaria de atendimento exclusivo na Canto SA Boutique.')">
-<i class="fa-solid fa-message"></i>
-</button>
-</header>
-<!-- Conteúdo Principal Feminino -->
-<div class="px-5 pt-5 space-y-6">
-<!-- Hero Textual -->
-<div>
-<span class="text-[11px] font-bold tracking-wider uppercase text-[#b5474c]">Curadoria Exclusiva</span>
-<h1 class="font-serif text-3xl font-bold text-stone-900 leading-[1.2] mt-1">
-            O look certo faz você se sentir você mesma.
-          </h1>
-<p class="text-xs text-stone-600 mt-2 leading-relaxed">
-            Peças selecionadas com elegância e consultoria atenciosa no Centro de Cáceres.
-          </p>
-<button class="mt-4 w-full bg-[#b5474c] text-white py-3 rounded-2xl font-semibold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-[#933539] transition-all" onclick="openWhatsApp('Olá! Vim pelo site e gostaria de ver os novos lançamentos femininos!')">
-<i class="fa-solid fa-comment-dots"></i>
-<span>Quero ver as novidades no WhatsApp</span>
-</button>
-<div class="flex items-center justify-center gap-2 text-[11px] text-stone-500 mt-2.5">
-<i class="fa-regular fa-clock"></i>
-<span>Compras na loja ou entrega rápida em Cáceres</span>
-</div>
-</div>
-<!-- Carrossel de Looks Reais (Horizontal Scroll) -->
-<div>
-<div class="flex items-center justify-between mb-3">
-<div>
-<span class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Feed &amp; Lançamentos</span>
-<h3 class="font-serif text-lg font-bold text-stone-900">Looks Selecionados</h3>
-</div>
-<span class="text-xs text-[#b5474c] font-medium flex items-center gap-1">
-              Deslize <i class="fa-solid fa-arrows-left-right text-[10px]"></i>
-</span>
-</div>
-<div class="flex gap-3.5 overflow-x-auto hide-scrollbar pb-2 snap-x snap-mandatory">
-<!-- Look 1: Terracota -->
-<div class="min-w-[240px] max-w-[240px] bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200/70 snap-start flex-shrink-0">
-<div class="h-72 w-full relative overflow-hidden bg-stone-100">
-<img class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<span class="absolute top-2.5 left-2.5 bg-[#b5474c] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Exclusivo</span>
-</div>
-<div class="p-3.5">
-<h4 class="font-bold text-sm text-stone-900">Vestido Terracota Acetinado</h4>
-<p class="text-xs text-stone-500 mt-0.5">Caimento fluido e fenda elegante</p>
-<button class="mt-3 w-full bg-[#fce8e8] text-[#b5474c] py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-[#fad4d6] transition-colors" onclick="openWhatsApp('Olá! Tenho interesse no Vestido Terracota Acetinado da Canto SA!')">
-<i class="fa-brands fa-whatsapp"></i>
-<span>Pedir no WhatsApp</span>
-</button>
-</div>
-</div>
-<!-- Look 2: Vestido Off-White -->
-<div class="min-w-[240px] max-w-[240px] bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200/70 snap-start flex-shrink-0">
-<div class="h-72 w-full relative overflow-hidden bg-stone-100">
-<img class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<span class="absolute top-2.5 left-2.5 bg-stone-900 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Destaque</span>
-</div>
-<div class="p-3.5">
-<h4 class="font-bold text-sm text-stone-900">Vestido Linho Off-White</h4>
-<p class="text-xs text-stone-500 mt-0.5">Fresco, nobre e atemporal</p>
-<button class="mt-3 w-full bg-[#fce8e8] text-[#b5474c] py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-[#fad4d6] transition-colors" onclick="openWhatsApp('Olá! Gostaria de consultar tamanhos do Vestido Off-White!')">
-<i class="fa-brands fa-whatsapp"></i>
-<span>Pedir no WhatsApp</span>
-</button>
-</div>
-</div>
-<!-- Look 3: Mostarda Sofisticado -->
-<div class="min-w-[240px] max-w-[240px] bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200/70 snap-start flex-shrink-0">
-<div class="h-72 w-full relative overflow-hidden bg-stone-100">
-<img class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<span class="absolute top-2.5 left-2.5 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Alfaiataria</span>
-</div>
-<div class="p-3.5">
-<h4 class="font-bold text-sm text-stone-900">Conjunto Mostarda Nobre</h4>
-<p class="text-xs text-stone-500 mt-0.5">Design assimétrico e presença</p>
-<button class="mt-3 w-full bg-[#fce8e8] text-[#b5474c] py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-[#fad4d6] transition-colors" onclick="openWhatsApp('Olá! Gostaria de saber mais sobre o Conjunto Mostarda!')">
-<i class="fa-brands fa-whatsapp"></i>
-<span>Pedir no WhatsApp</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Diferenciais da Boutique -->
-<div class="bg-white p-4 rounded-3xl shadow-sm border border-stone-100 space-y-3">
-<h4 class="font-serif text-sm font-bold text-stone-800">Por que escolher a Boutique?</h4>
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-[#fce8e8] text-[#b5474c] flex items-center justify-center text-xs flex-shrink-0">
-<i class="fa-solid fa-gem"></i>
-</div>
-<div>
-<h5 class="text-xs font-bold text-stone-800">Seleção com Critério</h5>
-<p class="text-[11px] text-stone-500">Modelagens e tecidos nobres para mulheres exigentes.</p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-[#fce8e8] text-[#b5474c] flex items-center justify-center text-xs flex-shrink-0">
-<i class="fa-solid fa-heart"></i>
-</div>
-<div>
-<h5 class="text-xs font-bold text-stone-800">Consultoria de Estilo Pessoal</h5>
-<p class="text-[11px] text-stone-500">Atendimento acolhedor pensado em você.</p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-[#fce8e8] text-[#b5474c] flex items-center justify-center text-xs flex-shrink-0">
-<i class="fa-solid fa-mug-hot"></i>
-</div>
-<div>
-<h5 class="text-xs font-bold text-stone-800">Espaço Climatizado</h5>
-<p class="text-[11px] text-stone-500">Um cantinho aconchegante com cafezinho expresso da hora.</p>
-</div>
-</div>
-</div>
-<!-- Avaliações Google -->
-<div class="bg-[#fcf2f2] p-4 rounded-3xl border border-[#eed4d5]">
-<div class="flex items-center justify-between mb-2">
-<span class="text-xs font-bold text-[#b5474c] flex items-center gap-1">
-<i class="fa-solid fa-star text-amber-500"></i> 5.0 no Google Avaliações
+<body class="bg-stone-900 text-stone-800 font-sans antialiased min-h-screen flex justify-center items-start sm:py-6">
+
+  <!-- Container Mobile-First Centralizado -->
+  <div class="w-full max-w-md bg-brand-cream min-h-screen sm:min-h-[850px] sm:rounded-3xl shadow-2xl relative overflow-hidden flex flex-col">
+
+    <!-- ==================== TELA 1: HUB DE ESCOLHA ==================== -->
+    <div id="view-hub" class="page-view flex-1 flex flex-col justify-between p-6">
+      <div class="text-center pt-4">
+        <span class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-brand-maroon bg-rose-100/70 px-3.5 py-1 rounded-full mb-3">
+          <span class="material-symbols-outlined text-sm">location_on</span> Canto • Cáceres-MT
+        </span>
+        <h1 class="font-serif text-3xl font-bold text-stone-900 leading-tight">O que você procura hoje?</h1>
+        <p class="text-xs text-stone-600 mt-2 max-w-xs mx-auto">Escolha o seu lado e veja as novidades e coleções que preparamos para você.</p>
+      </div>
+
+      <div class="space-y-5 my-6">
+        <!-- Card 1: Canto SA Boutique -->
+        <div onclick="navigateTo('boutique')" class="group cursor-pointer rounded-2xl bg-white border border-stone-200/90 shadow-sm hover:shadow-md transition-all overflow-hidden">
+          <div class="h-44 relative overflow-hidden">
+            <img src="Captura de tela 2026-11-12 115931.png" alt="Canto SA Boutique" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+            <span class="absolute top-3 left-3 bg-white/95 text-brand-maroon text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
+              Moda Feminina
             </span>
-<span class="text-[10px] text-stone-500">Clientes Reais</span>
-</div>
-<p class="text-xs text-stone-700 italic">
-            "Atendimento nota 1000, ambiente super agradável, e ainda tem aquele cafezinho expresso da hora!"
-          </p>
-<span class="text-[11px] font-bold text-stone-800 block mt-2">— Antonio F.</span>
-</div>
-<!-- Mapa / Endereço -->
-<div class="bg-white p-4 rounded-3xl shadow-sm border border-stone-100">
-<div class="flex items-center gap-2 mb-2">
-<i class="fa-solid fa-store text-[#b5474c] text-sm"></i>
-<h4 class="text-xs font-bold text-stone-800">Venha nos Visitar</h4>
-</div>
-<p class="text-xs text-stone-600">R. Cel. Faria, 755 - Centro, Cáceres - MT</p>
-<p class="text-xs text-stone-500 mt-0.5">Telefone: (65) 99357-3130</p>
-<a class="mt-3 block w-full text-center bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-semibold py-2 rounded-xl transition-colors" href="https://maps.google.com/?q=R.+Cel.+Faria,+755+-+Centro,+Cáceres+-+MT" target="_blank">
-<i class="fa-solid fa-location-arrow mr-1"></i> Abrir no Google Maps
-          </a>
-</div>
-</div>
-</div>
-<!-- ========================================== -->
-<!-- TELA 3: CANTO DAS TORCIDAS (MASCULINO)    -->
-<!-- ========================================== -->
-<div class="screen-view pb-24" id="screen-masculino">
-<!-- Top Bar com Atalho Voltar -->
-<header class="sticky top-0 z-30 bg-[#fff8f7]/90 backdrop-blur-md px-5 py-3.5 border-b border-[#eed4d5] flex items-center justify-between">
-<button class="text-xs font-bold text-[#b5474c] flex items-center gap-1.5 hover:underline active:scale-95 transition-all" onclick="navigateTo('screen-hub')">
-<i class="fa-solid fa-arrow-left"></i>
-<span>Trocar de loja</span>
-</button>
-<span class="text-xs font-extrabold tracking-wide uppercase text-stone-800 font-sans">Canto das Torcidas</span>
-<button class="w-8 h-8 rounded-full bg-[#fce8e8] text-[#b5474c] flex items-center justify-center text-xs shadow-sm" onclick="openWhatsApp('Olá! Gostaria de consultar os mantos e moda masculina no Canto das Torcidas.')">
-<i class="fa-solid fa-message"></i>
-</button>
-</header>
-<!-- Conteúdo Principal Masculino -->
-<div class="px-5 pt-5 space-y-6">
-<!-- Hero Masculino -->
-<div>
-<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[10px] font-bold mb-2">
-<i class="fa-solid fa-star text-amber-500"></i>
-<span>5,0 no Google • 12 avaliações</span>
-</div>
-<h1 class="font-sans text-3xl font-extrabold text-stone-900 leading-tight uppercase tracking-tight">
-            Vista o manto do seu coração.
-          </h1>
-<p class="text-xs text-stone-600 mt-2 leading-relaxed">
-            Camisas oficiais de times, camisetas casuais John John e Acostamento, chinelos e bermudas. Atendimento de quem entende de futebol e torcida.
-          </p>
-<button class="mt-4 w-full bg-[#b5474c] text-white py-3 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-[#933539] transition-all" onclick="openWhatsApp('Olá! Gostaria de ver quais camisas e mantos estão disponíveis hoje!')">
-<i class="fa-solid fa-shirt"></i>
-<span>Ver mantos disponíveis no WhatsApp</span>
-</button>
-</div>
-<!-- Carrossel de Mantos e Peças Reais -->
-<div>
-<div class="flex items-center justify-between mb-3">
-<div>
-<span class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Catálogo Direto</span>
-<h3 class="font-sans text-lg font-extrabold text-stone-900">Em Destaque</h3>
-</div>
-<span class="text-xs text-[#b5474c] font-medium flex items-center gap-1">
-              Deslize <i class="fa-solid fa-arrows-left-right text-[10px]"></i>
-</span>
-</div>
-<div class="flex gap-3.5 overflow-x-auto hide-scrollbar pb-2 snap-x snap-mandatory">
-<!-- Produto 1: Santos FC Oficial -->
-<div class="min-w-[240px] max-w-[240px] bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 snap-start flex-shrink-0">
-<div class="h-64 w-full relative overflow-hidden bg-stone-100">
-<img class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<span class="absolute top-2.5 left-2.5 bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Oficial</span>
-</div>
-<div class="p-3.5">
-<h4 class="font-bold text-sm text-stone-900">Camisa Santos FC Listrada</h4>
-<p class="text-xs text-stone-500 mt-0.5">Manto oficial com selo de autenticidade</p>
-<button class="mt-3 w-full bg-[#b5474c] text-white py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-[#933539] transition-colors" onclick="openWhatsApp('Olá! Quero saber o valor e tamanhos da Camisa do Santos FC!')">
-<i class="fa-brands fa-whatsapp"></i>
-<span>Consultar Manto</span>
-</button>
-</div>
-</div>
-<!-- Produto 2: Flamengo -->
-<div class="min-w-[240px] max-w-[240px] bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 snap-start flex-shrink-0">
-<div class="h-64 w-full relative overflow-hidden bg-stone-100">
-<img class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<span class="absolute top-2.5 left-2.5 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Mais Vendida</span>
-</div>
-<div class="p-3.5">
-<h4 class="font-bold text-sm text-stone-900">Manto Flamengo Especial</h4>
-<p class="text-xs text-stone-500 mt-0.5">Modelo torcedor unissex &amp; casal</p>
-<button class="mt-3 w-full bg-[#b5474c] text-white py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-[#933539] transition-colors" onclick="openWhatsApp('Olá! Tem a camisa do Flamengo disponível no meu tamanho?')">
-<i class="fa-brands fa-whatsapp"></i>
-<span>Consultar Manto</span>
-</button>
-</div>
-</div>
-<!-- Produto 3: John John & Acostamento -->
-<div class="min-w-[240px] max-w-[240px] bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 snap-start flex-shrink-0">
-<div class="h-64 w-full relative overflow-hidden bg-stone-100">
-<img class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<span class="absolute top-2.5 left-2.5 bg-stone-900 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Casual Premium</span>
-</div>
-<div class="p-3.5">
-<h4 class="font-bold text-sm text-stone-900">T-Shirts John John &amp; Acostamento</h4>
-<p class="text-xs text-stone-500 mt-0.5">Cores clássicas, caimento impecável</p>
-<button class="mt-3 w-full bg-[#b5474c] text-white py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-[#933539] transition-colors" onclick="openWhatsApp('Olá! Gostaria de ver as opções de camisetas John John e Acostamento!')">
-<i class="fa-brands fa-whatsapp"></i>
-<span>Ver Modelos</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Diferenciais Masculino -->
-<div class="bg-white p-4 rounded-3xl shadow-sm border border-stone-100 space-y-3">
-<h4 class="font-bold text-sm text-stone-800">Por que comprar com a gente?</h4>
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-[#fce8e8] text-[#b5474c] flex items-center justify-center text-xs flex-shrink-0">
-<i class="fa-solid fa-certificate"></i>
-</div>
-<div>
-<h5 class="text-xs font-bold text-stone-800">Mantos Oficiais &amp; Atualizados</h5>
-<p class="text-[11px] text-stone-500">Coleções sempre renovadas a cada temporada de campeonatos.</p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-[#fce8e8] text-[#b5474c] flex items-center justify-center text-xs flex-shrink-0">
-<i class="fa-solid fa-futbol"></i>
-</div>
-<div>
-<h5 class="text-xs font-bold text-stone-800">Atendimento de Torcedor para Torcedor</h5>
-<p class="text-[11px] text-stone-500">Conversa direta com quem realmente acompanha futebol e ama o esporte.</p>
-</div>
-</div>
-</div>
-<!-- CTA Qual é o seu Time -->
-<div class="bg-[#933539] text-white p-5 rounded-3xl shadow-md text-center">
-<i class="fa-solid fa-bullhorn text-2xl text-amber-300 mb-2"></i>
-<h4 class="font-bold text-base uppercase">Qual é o seu time?</h4>
-<p class="text-xs text-stone-200 mt-1 max-w-xs mx-auto">
-            Chame no WhatsApp, diga qual clube você torce e mandamos na hora fotos das peças disponíveis!
-          </p>
-<button class="mt-4 bg-white text-[#933539] hover:bg-stone-100 px-5 py-2.5 rounded-full text-xs font-extrabold shadow-sm transition-all inline-flex items-center gap-2" onclick="openWhatsApp('Olá! Meu time é o [DIGITE SEU TIME], tem manto dele disponível?')">
-<i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
-<span>Chamar no WhatsApp</span>
-</button>
-</div>
-<!-- Mapa / Endereço -->
-<div class="bg-white p-4 rounded-3xl shadow-sm border border-stone-100">
-<div class="flex items-center gap-2 mb-2">
-<i class="fa-solid fa-store text-[#b5474c] text-sm"></i>
-<h4 class="text-xs font-bold text-stone-800">Venha nos Visitar</h4>
-</div>
-<p class="text-xs text-stone-600">R. Cel. Faria, 755 - Centro, Cáceres - MT</p>
-<p class="text-xs text-stone-500 mt-0.5">Telefone: (65) 99357-3130</p>
-<a class="mt-3 block w-full text-center bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-semibold py-2 rounded-xl transition-colors" href="https://maps.google.com/?q=R.+Cel.+Faria,+755+-+Centro,+Cáceres+-+MT" target="_blank">
-<i class="fa-solid fa-location-arrow mr-1"></i> Abrir no Google Maps
-          </a>
-</div>
-</div>
-</div>
-<!-- ========================================== -->
-<!-- BARRA DE NAVEGAÇÃO INFERIOR (BOTTOM NAV)   -->
-<!-- Visível nas telas internas (Feminino/Masc) -->
-<!-- ========================================== -->
-<nav class="hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white/95 backdrop-blur border-t border-stone-200 px-6 py-2.5 z-40 flex justify-around items-center shadow-lg" id="bottom-bar">
-<button class="flex flex-col items-center text-stone-500 hover:text-[#b5474c] transition-colors group" onclick="navigateTo('screen-hub')">
-<i class="fa-solid fa-house text-base group-hover:scale-110 transition-transform"></i>
-<span class="text-[10px] font-semibold mt-1">Início</span>
-</button>
-<button class="flex flex-col items-center text-stone-500 hover:text-[#b5474c] transition-colors group" id="nav-btn-feminino" onclick="navigateTo('screen-feminino')">
-<i class="fa-solid fa-person-dress text-base group-hover:scale-110 transition-transform"></i>
-<span class="text-[10px] font-semibold mt-1">Feminino</span>
-</button>
-<button class="flex flex-col items-center text-stone-500 hover:text-[#b5474c] transition-colors group" id="nav-btn-masculino" onclick="navigateTo('screen-masculino')">
-<i class="fa-solid fa-futbol text-base group-hover:scale-110 transition-transform"></i>
-<span class="text-[10px] font-semibold mt-1">Masculino</span>
-</button>
-<button class="flex flex-col items-center text-emerald-600 hover:text-emerald-700 transition-colors group" onclick="openWhatsApp('Olá! Vim pelo site da Canto e gostaria de tirar uma dúvida!')">
-<i class="fa-brands fa-whatsapp text-lg group-hover:scale-110 transition-transform"></i>
-<span class="text-[10px] font-semibold mt-1">Contato</span>
-</button>
-</nav>
-<!-- Botão Flutuante de WhatsApp Global -->
-<button class="fixed bottom-20 right-5 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl active:scale-95 transition-all text-xl" onclick="openWhatsApp('Olá! Vim pelo site e gostaria de falar com a equipe da Canto!')" title="Fale conosco no WhatsApp">
-<i class="fa-brands fa-whatsapp"></i>
-</button>
-</main>
-<!-- Script de Navegação SPA e Integração WhatsApp -->
-<script>
-    // Número oficial da loja Canto SA (Cáceres-MT)
-    const WHATSAPP_PHONE = "5565993573130";
+            <div class="absolute bottom-3 left-4 right-4">
+              <h2 class="font-serif text-xl font-bold text-white leading-snug">Canto SA Boutique</h2>
+              <p class="text-[11px] text-stone-200 line-clamp-1">Curadoria exclusiva, vestidos fluidos, alfaiataria e elegância.</p>
+            </div>
+          </div>
+          <div class="p-3.5 flex items-center justify-between bg-white">
+            <span class="text-xs text-stone-600 font-medium">Toque para explorar catálogo</span>
+            <span class="py-2 px-3.5 bg-brand-maroon text-white font-medium text-xs rounded-xl flex items-center gap-1.5 shadow-sm group-hover:bg-brand-darkMaroon transition-colors">
+              Entrar no Espaço <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </span>
+          </div>
+        </div>
 
-    function openWhatsApp(customText) {
-      const msg = encodeURIComponent(customText || "Olá! Vim pelo site e gostaria de saber mais informações.");
-      window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, '_blank');
-    }
+        <!-- Card 2: Canto das Torcidas -->
+        <div onclick="navigateTo('torcidas')" class="group cursor-pointer rounded-2xl bg-white border border-stone-200/90 shadow-sm hover:shadow-md transition-all overflow-hidden">
+          <div class="h-44 relative overflow-hidden">
+            <img src="Captura de tela 2026-11-12 122503.png" alt="Canto das Torcidas" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+            <span class="absolute top-3 left-3 bg-white/95 text-stone-900 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
+              Mantos & Masculino
+            </span>
+            <div class="absolute bottom-3 left-4 right-4">
+              <h2 class="font-serif text-xl font-bold text-white leading-snug">Canto das Torcidas</h2>
+              <p class="text-[11px] text-stone-200 line-clamp-1">Camisas oficiais de times, John John, Acostamento e moda casual.</p>
+            </div>
+          </div>
+          <div class="p-3.5 flex items-center justify-between bg-white">
+            <span class="text-xs text-stone-600 font-medium">Toque para ver mantos</span>
+            <span class="py-2 px-3.5 bg-brand-maroon text-white font-medium text-xs rounded-xl flex items-center gap-1.5 shadow-sm group-hover:bg-brand-darkMaroon transition-colors">
+              Entrar no Espaço <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </span>
+          </div>
+        </div>
+      </div>
 
-    function navigateTo(targetScreenId) {
-      // Ocultar todas as telas
-      document.querySelectorAll('.screen-view').forEach(screen => {
-        screen.classList.remove('active');
-      });
-
-      // Ativar a tela alvo
-      const targetScreen = document.getElementById(targetScreenId);
-      if (targetScreen) {
-        targetScreen.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-
-      // Controlar exibição da Bottom Nav
-      const bottomBar = document.getElementById('bottom-bar');
-      const btnFem = document.getElementById('nav-btn-feminino');
-      const btnMasc = document.getElementById('nav-btn-masculino');
-
-      if (targetScreenId === 'screen-hub') {
-        bottomBar.classList.add('hidden');
-      } else {
-        bottomBar.classList.remove('hidden');
+      <!-- Rodapé Hub -->
+      <div class="text-center pt-2 border-t border-stone-200/60 relative">
+        <p class="text-xs text-emerald-600 font-medium flex items-center justify-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Aberto hoje até às 18h
+        </p>
+        <p class="text-[11px] text-stone-500 mt-1">R. Cel. Faria, 755 • Centro • Cáceres-MT</p>
         
-        // Estilizar abas ativas
-        if (targetScreenId === 'screen-feminino') {
-          btnFem.classList.add('text-[#b5474c]', 'font-bold');
-          btnFem.classList.remove('text-stone-500');
-          btnMasc.classList.remove('text-[#b5474c]', 'font-bold');
-          btnMasc.classList.add('text-stone-500');
-        } else if (targetScreenId === 'screen-masculino') {
-          btnMasc.classList.add('text-[#b5474c]', 'font-bold');
-          btnMasc.classList.remove('text-stone-500');
-          btnFem.classList.remove('text-[#b5474c]', 'font-bold');
-          btnFem.classList.add('text-stone-500');
-        }
+        <!-- Botão Flutuante WhatsApp WhatsApp Central da Loja -->
+        <a href="https://wa.me/5565993573130?text=Olá!%20Vim%20pelo%20site%20da%20loja%20Canto%20e%20gostaria%20de%20informações." target="_blank" class="absolute -top-12 right-1 w-11 h-11 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-105" title="Falar no WhatsApp">
+          <span class="material-symbols-outlined text-2xl">chat</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ==================== TELA 2: CANTO SA BOUTIQUE ==================== -->
+    <div id="view-boutique" class="page-view flex-1 flex-col hidden pb-20">
+      <header class="p-4 flex items-center justify-between border-b border-stone-200 bg-white/95 backdrop-blur sticky top-0 z-30">
+        <button onclick="navigateTo('hub')" class="text-xs font-medium text-stone-600 hover:text-stone-900 flex items-center gap-1">
+          <span class="material-symbols-outlined text-lg">arrow_back</span> Início
+        </button>
+        <h2 class="font-serif font-bold text-stone-900 text-base">Canto SA Boutique</h2>
+        <a href="https://wa.me/5565993573130?text=Olá!%20Gostaria%20de%20atendimento%20na%20Canto%20SA%20Boutique." target="_blank" class="p-1.5 text-emerald-600 hover:bg-emerald-50 rounded-full" title="WhatsApp Boutique">
+          <span class="material-symbols-outlined text-xl">chat</span>
+        </a>
+      </header>
+
+      <div class="p-5 space-y-6">
+        <!-- Banner Fachada -->
+        <div class="rounded-2xl overflow-hidden relative shadow-sm border border-stone-200">
+          <img src="Captura de tela 2026-11-12 114156.png" alt="Loja Canto SA Boutique e Canto das Torcidas" class="w-full h-36 object-cover">
+          <div class="p-3 bg-white">
+            <span class="text-[10px] uppercase font-bold tracking-wider text-brand-maroon bg-rose-50 px-2 py-0.5 rounded-full">Fachada Oficial</span>
+            <p class="text-xs text-stone-700 font-medium mt-1">R. Cel. Faria, 755 - Centro, Cáceres - MT</p>
+          </div>
+        </div>
+
+        <!-- Vitrine Carrossel Feminino -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="font-serif font-bold text-stone-900 text-base">Coleção & Destaques</h4>
+            <span class="text-xs text-stone-500">Deslize para ver</span>
+          </div>
+
+          <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2 snap-x">
+            <!-- Item 1: Vestido Terracota -->
+            <div class="min-w-[230px] max-w-[230px] bg-white rounded-2xl p-3 border border-stone-200 shadow-sm snap-start flex flex-col justify-between">
+              <div>
+                <div class="h-64 rounded-xl overflow-hidden relative mb-3 bg-stone-100">
+                  <img src="Captura de tela 2026-11-12 115931.png" alt="Vestido Terracota Acetinado" class="w-full h-full object-cover">
+                  <span class="absolute top-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur">Exclusivo</span>
+                </div>
+                <h5 class="font-serif font-bold text-sm text-stone-900 leading-tight">Vestido Terracota Acetinado</h5>
+                <p class="text-xs text-stone-500 mt-1">Drapeado fluido com detalhe no ombro e caimento impecável.</p>
+              </div>
+              <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Vestido%20Terracota%20Acetinado!" target="_blank" class="mt-3 block text-center py-2 bg-brand-maroon hover:bg-brand-darkMaroon text-white text-xs font-medium rounded-xl transition-colors">
+                Consultar via WhatsApp
+              </a>
+            </div>
+
+            <!-- Item 2: Conjunto Off-white -->
+            <div class="min-w-[230px] max-w-[230px] bg-white rounded-2xl p-3 border border-stone-200 shadow-sm snap-start flex flex-col justify-between">
+              <div>
+                <div class="h-64 rounded-xl overflow-hidden relative mb-3 bg-stone-100">
+                  <img src="Captura de tela 2026-11-12 115904.png" alt="Conjunto Saia Longa & Colete" class="w-full h-full object-cover">
+                  <span class="absolute top-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur">Linho Puro</span>
+                </div>
+                <h5 class="font-serif font-bold text-sm text-stone-900 leading-tight">Conjunto Saia Longa & Colete</h5>
+                <p class="text-xs text-stone-500 mt-1">Off-white sofisticado para eventos diurnos e ocasiões especiais.</p>
+              </div>
+              <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Conjunto%20Off-White%20de%20Linho!" target="_blank" class="mt-3 block text-center py-2 bg-brand-maroon hover:bg-brand-darkMaroon text-white text-xs font-medium rounded-xl transition-colors">
+                Consultar via WhatsApp
+              </a>
+            </div>
+
+            <!-- Item 3: Vestido Mostarda Plissado -->
+            <div class="min-w-[230px] max-w-[230px] bg-white rounded-2xl p-3 border border-stone-200 shadow-sm snap-start flex flex-col justify-between">
+              <div>
+                <div class="h-64 rounded-xl overflow-hidden relative mb-3 bg-stone-100">
+                  <img src="Captura de tela 2026-11-12 115846.png" alt="Vestido Mostarda Plissado" class="w-full h-full object-cover">
+                  <span class="absolute top-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur">Alta Costura</span>
+                </div>
+                <h5 class="font-serif font-bold text-sm text-stone-900 leading-tight">Vestido Mostarda Plissado</h5>
+                <p class="text-xs text-stone-500 mt-1">Um ombro só com drapeado elegante e presença marcante.</p>
+              </div>
+              <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Vestido%20Mostarda%20Plissado!" target="_blank" class="mt-3 block text-center py-2 bg-brand-maroon hover:bg-brand-darkMaroon text-white text-xs font-medium rounded-xl transition-colors">
+                Consultar via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner VIP Delivery -->
+        <div class="bg-white p-4 rounded-2xl border border-stone-200 space-y-2">
+          <div class="flex items-center gap-2 text-brand-maroon">
+            <span class="material-symbols-outlined">local_shipping</span>
+            <h4 class="font-serif font-bold text-sm text-stone-900">Mala Delivery em Cáceres</h4>
+          </div>
+          <p class="text-xs text-stone-600">Levamos as opções selecionadas até a sua casa para você provar com conforto e tranquilidade.</p>
+          <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20agendar%20uma%20mala%20delivery%20em%20Cáceres!" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 hover:text-emerald-700 pt-1">
+            <span class="material-symbols-outlined text-sm">chat</span> Solicitar mala delivery no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TELA 3: CANTO DAS TORCIDAS ==================== -->
+    <div id="view-torcidas" class="page-view flex-1 flex-col hidden pb-20">
+      <header class="p-4 flex items-center justify-between border-b border-stone-800 bg-stone-950 text-white sticky top-0 z-30">
+        <button onclick="navigateTo('hub')" class="text-xs font-medium text-stone-400 hover:text-white flex items-center gap-1">
+          <span class="material-symbols-outlined text-lg">arrow_back</span> Início
+        </button>
+        <h2 class="font-bold tracking-tight text-base">Canto das Torcidas</h2>
+        <a href="https://wa.me/5565993573130?text=Olá!%20Gostaria%20de%20atendimento%20no%20Canto%20das%20Torcidas." target="_blank" class="p-1.5 text-emerald-400 hover:bg-stone-900 rounded-full" title="WhatsApp Torcidas">
+          <span class="material-symbols-outlined text-xl">chat</span>
+        </a>
+      </header>
+
+      <div class="p-5 space-y-6">
+        <!-- Banner Torcidas -->
+        <div class="bg-stone-950 text-white p-4 rounded-2xl border border-stone-800 shadow-sm">
+          <span class="text-[10px] uppercase font-bold tracking-wider text-rose-500 bg-stone-900 px-2 py-0.5 rounded-full">100% Originais</span>
+          <h3 class="font-serif text-xl font-bold mt-2">Mantos Oficiais & Marcas</h3>
+          <p class="text-xs text-stone-400 mt-1">Camisas oficiais dos maiores clubes do Brasil e do mundo, além de moda casual masculina John John e Acostamento.</p>
+        </div>
+
+        <!-- Vitrine Masculino Carrossel -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="font-bold text-stone-900 text-base">Mantos & Moda Masculina</h4>
+            <span class="text-xs text-stone-500">Deslize para ver</span>
+          </div>
+
+          <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2 snap-x">
+            <!-- Item 1: Flamengo -->
+            <div class="min-w-[230px] max-w-[230px] bg-white rounded-2xl p-3 border border-stone-200 shadow-sm snap-start flex flex-col justify-between">
+              <div>
+                <div class="h-64 rounded-xl overflow-hidden relative mb-3 bg-stone-100">
+                  <img src="Captura de tela 2026-11-12 122503.png" alt="Manto Flamengo Oficial" class="w-full h-full object-cover">
+                  <span class="absolute top-2 right-2 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded-full">Casal / Manto</span>
+                </div>
+                <h5 class="font-bold text-sm text-stone-900 leading-tight">Manto Flamengo Oficial</h5>
+                <p class="text-xs text-stone-500 mt-1">Modelos masculinos e femininos oficiais para torcer com paixão.</p>
+              </div>
+              <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20ver%20as%20camisas%20do%20Flamengo%20disponíveis!" target="_blank" class="mt-3 block text-center py-2 bg-stone-900 hover:bg-black text-white text-xs font-medium rounded-xl transition-colors">
+                Garantir Manto
+              </a>
+            </div>
+
+            <!-- Item 2: Santos FC -->
+            <div class="min-w-[230px] max-w-[230px] bg-white rounded-2xl p-3 border border-stone-200 shadow-sm snap-start flex flex-col justify-between">
+              <div>
+                <div class="h-64 rounded-xl overflow-hidden relative mb-3 bg-stone-100">
+                  <img src="Captura de tela 2026-11-12 122534.png" alt="Manto Santos FC Oficial Umbro" class="w-full h-full object-cover">
+                  <span class="absolute top-2 right-2 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded-full">Oficial</span>
+                </div>
+                <h5 class="font-bold text-sm text-stone-900 leading-tight">Manto Santos FC Oficial</h5>
+                <p class="text-xs text-stone-500 mt-1">Listrada clássica Umbro com selo de autenticidade.</p>
+              </div>
+              <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20ver%20o%20tamanho%20da%20Camisa%20do%20Santos!" target="_blank" class="mt-3 block text-center py-2 bg-stone-900 hover:bg-black text-white text-xs font-medium rounded-xl transition-colors">
+                Ver Tamanhos
+              </a>
+            </div>
+
+            <!-- Item 3: T-Shirt John John -->
+            <div class="min-w-[230px] max-w-[230px] bg-white rounded-2xl p-3 border border-stone-200 shadow-sm snap-start flex flex-col justify-between">
+              <div>
+                <div class="h-64 rounded-xl overflow-hidden relative mb-3 bg-stone-100">
+                  <img src="Captura de tela 2026-11-12 122550.png" alt="T-Shirt John John Original" class="w-full h-full object-cover">
+                  <span class="absolute top-2 right-2 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded-full">Grife</span>
+                </div>
+                <h5 class="font-bold text-sm text-stone-900 leading-tight">T-Shirt John John Básica</h5>
+                <p class="text-xs text-stone-500 mt-1">Algodão pima nobre, conforto absoluto e caimento premium.</p>
+              </div>
+              <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20ver%20as%20peças%20da%20John%20John!" target="_blank" class="mt-3 block text-center py-2 bg-stone-900 hover:bg-black text-white text-xs font-medium rounded-xl transition-colors">
+                Consultar Estoque
+              </a>
+            </div>
+
+            <!-- Item 4: Camisetas Acostamento -->
+            <div class="min-w-[230px] max-w-[230px] bg-white rounded-2xl p-3 border border-stone-200 shadow-sm snap-start flex flex-col justify-between">
+              <div>
+                <div class="h-64 rounded-xl overflow-hidden relative mb-3 bg-stone-100">
+                  <img src="Captura de tela 2026-11-12 122658.png" alt="Camisetas Acostamento" class="w-full h-full object-cover">
+                  <span class="absolute top-2 right-2 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded-full">Casual</span>
+                </div>
+                <h5 class="font-bold text-sm text-stone-900 leading-tight">Camisetas Acostamento</h5>
+                <p class="text-xs text-stone-500 mt-1">Cores clássicas, bordado característico do lobo e tecido durável.</p>
+              </div>
+              <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20ver%20as%20camisetas%20da%20Acostamento!" target="_blank" class="mt-3 block text-center py-2 bg-stone-900 hover:bg-black text-white text-xs font-medium rounded-xl transition-colors">
+                Ver Cores
+              </a>
+            </div>
+
+            <!-- Item 5: Kit Acostamento Polo & Chinelo -->
+            <div class="min-w-[230px] max-w-[230px] bg-white rounded-2xl p-3 border border-stone-200 shadow-sm snap-start flex flex-col justify-between">
+              <div>
+                <div class="h-64 rounded-xl overflow-hidden relative mb-3 bg-stone-100">
+                  <img src="Captura de tela 2026-11-12 122718.png" alt="Kit Acostamento Polo e Chinelo" class="w-full h-full object-cover">
+                  <span class="absolute top-2 right-2 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded-full">Kit Completo</span>
+                </div>
+                <h5 class="font-bold text-sm text-stone-900 leading-tight">Kit Polo & Chinelo</h5>
+                <p class="text-xs text-stone-500 mt-1">Combinação ideal para presentes e para o fim de semana.</p>
+              </div>
+              <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20ver%20o%20Kit%20Acostamento%20Polo%20e%20Chinelo!" target="_blank" class="mt-3 block text-center py-2 bg-stone-900 hover:bg-black text-white text-xs font-medium rounded-xl transition-colors">
+                Pedir no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Encomenda de Times -->
+        <div class="bg-stone-100 p-4 rounded-2xl border border-stone-200 space-y-2">
+          <div class="flex items-center gap-2 text-stone-900">
+            <span class="material-symbols-outlined">sports_soccer</span>
+            <h4 class="font-bold text-sm">Camisas sob encomenda</h4>
+          </div>
+          <p class="text-xs text-stone-600">Não encontrou o seu time? Encomendamos qualquer manto nacional ou internacional com personalização de nome e número.</p>
+          <a href="https://wa.me/5565993573130?text=Olá,%20gostaria%20de%20encomendar%20um%20manto%20específico!" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 hover:text-emerald-700 pt-1">
+            <span class="material-symbols-outlined text-sm">chat</span> Encomendar manto no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra Inferior de Navegação (Visível nas telas 2 e 3) -->
+    <nav id="bottom-bar" class="hidden absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-stone-200 px-6 py-2.5 flex justify-around items-center z-40">
+      <button onclick="navigateTo('hub')" class="flex flex-col items-center text-stone-500 hover:text-stone-900">
+        <span class="material-symbols-outlined text-xl">home</span>
+        <span class="text-[10px] font-medium">Início</span>
+      </button>
+      <button onclick="navigateTo('boutique')" id="nav-btn-boutique" class="flex flex-col items-center text-stone-500 hover:text-brand-maroon">
+        <span class="material-symbols-outlined text-xl">styler</span>
+        <span class="text-[10px] font-medium">Boutique</span>
+      </button>
+      <button onclick="navigateTo('torcidas')" id="nav-btn-torcidas" class="flex flex-col items-center text-stone-500 hover:text-stone-900">
+        <span class="material-symbols-outlined text-xl">sports_soccer</span>
+        <span class="text-[10px] font-medium">Torcidas</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Script de Navegação Instantânea (Sem rolar para baixo, abrindo no topo) -->
+  <script>
+    function navigateTo(page) {
+      const hub = document.getElementById('view-hub');
+      const boutique = document.getElementById('view-boutique');
+      const torcidas = document.getElementById('view-torcidas');
+      const bottomBar = document.getElementById('bottom-bar');
+      const btnBoutique = document.getElementById('nav-btn-boutique');
+      const btnTorcidas = document.getElementById('nav-btn-torcidas');
+
+      // Ocultar todas as telas
+      hub.classList.add('hidden');
+      boutique.classList.add('hidden');
+      torcidas.classList.add('hidden');
+      bottomBar.classList.remove('hidden');
+
+      // Resetar destaques
+      btnBoutique.classList.remove('text-brand-maroon', 'font-bold');
+      btnTorcidas.classList.remove('text-stone-950', 'font-bold');
+
+      // Exibir tela escolhida
+      if (page === 'hub') {
+        hub.classList.remove('hidden');
+        bottomBar.classList.add('hidden');
+      } else if (page === 'boutique') {
+        boutique.classList.remove('hidden');
+        btnBoutique.classList.add('text-brand-maroon', 'font-bold');
+      } else if (page === 'torcidas') {
+        torcidas.classList.remove('hidden');
+        btnTorcidas.classList.add('text-stone-950', 'font-bold');
       }
+
+      // Rola para o topo imediatamente
+      window.scrollTo(0, 0);
     }
   </script>
 </body>
