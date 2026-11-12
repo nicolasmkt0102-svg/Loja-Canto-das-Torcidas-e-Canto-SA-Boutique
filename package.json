@@ -1,0 +1,18 @@
+{
+  "name": "canto-sa-boutique-torcidas",
+  "version": "1.0.0",
+  "description": "Vitrine Canto SA Boutique e Canto das Torcidas - Caceres MT",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "keywords": [
+    "boutique",
+    "canto-sa",
+    "canto-das-torcidas",
+    "caceres",
+    "moda"
+  ],
+  "author": "Canto SA",
+  "license": "MIT"
+}
