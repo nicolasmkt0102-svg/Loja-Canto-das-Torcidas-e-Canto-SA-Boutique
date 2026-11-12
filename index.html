@@ -53,7 +53,7 @@
 
       <div class="space-y-5 my-6">
         <!-- Card 1: Canto SA Boutique -->
-        <div onclick=\"go('boutique')\" class="group cursor-pointer rounded-2xl bg-white border border-stone-200/90 shadow-sm hover:shadow-md transition-all overflow-hidden">
+        <div onclick="go('boutique')" class="group cursor-pointer rounded-2xl bg-white border border-stone-200/90 shadow-sm hover:shadow-md transition-all overflow-hidden">
           <div class="h-44 relative overflow-hidden bg-stone-300">
             <img data-img="vestido-terracota" onerror="this.style.display='none'" alt="Canto SA Boutique" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
@@ -74,7 +74,7 @@
         </div>
 
         <!-- Card 2: Canto das Torcidas -->
-        <div onclick=\"go('torcidas')\" class="group cursor-pointer rounded-2xl bg-white border border-stone-200/90 shadow-sm hover:shadow-md transition-all overflow-hidden">
+        <div onclick="go('torcidas')" class="group cursor-pointer rounded-2xl bg-white border border-stone-200/90 shadow-sm hover:shadow-md transition-all overflow-hidden">
           <div class="h-44 relative overflow-hidden bg-stone-300">
             <img data-img="flamengo" onerror="this.style.display='none'" alt="Canto das Torcidas" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
@@ -112,7 +112,7 @@
     <!-- ==================== TELA 2: CANTO SA BOUTIQUE ==================== -->
     <div id="view-boutique" class="page-view flex-1 flex-col hidden pb-20">
       <header class="p-4 flex items-center justify-between border-b border-stone-200 bg-white/95 backdrop-blur sticky top-0 z-30">
-        <button onclick=\"go('hub')\" class="text-xs font-medium text-stone-600 hover:text-stone-900 flex items-center gap-1">
+        <button onclick="go('hub')" class="text-xs font-medium text-stone-600 hover:text-stone-900 flex items-center gap-1">
           <span class="material-symbols-outlined text-lg">arrow_back</span> Início
         </button>
         <h2 class="font-serif font-bold text-stone-900 text-base">Canto SA Boutique</h2>
@@ -203,7 +203,7 @@
     <!-- ==================== TELA 3: CANTO DAS TORCIDAS ==================== -->
     <div id="view-torcidas" class="page-view flex-1 flex-col hidden pb-20">
       <header class="p-4 flex items-center justify-between border-b border-stone-800 bg-stone-950 text-white sticky top-0 z-30">
-        <button onclick=\"go('hub')\" class="text-xs font-medium text-stone-400 hover:text-white flex items-center gap-1">
+        <button onclick="go('hub')" class="text-xs font-medium text-stone-400 hover:text-white flex items-center gap-1">
           <span class="material-symbols-outlined text-lg">arrow_back</span> Início
         </button>
         <h2 class="font-bold tracking-tight text-base">Canto das Torcidas</h2>
@@ -321,15 +321,15 @@
 
     <!-- Barra Inferior de Navegação (Visível nas telas 2 e 3) -->
     <nav id="bottom-bar" class="hidden absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-stone-200 px-6 py-2.5 flex justify-around items-center z-40">
-      <button onclick=\"go('hub')\" class="flex flex-col items-center text-stone-500 hover:text-stone-900">
+      <button onclick="go('hub')" class="flex flex-col items-center text-stone-500 hover:text-stone-900">
         <span class="material-symbols-outlined text-xl">home</span>
         <span class="text-[10px] font-medium">Início</span>
       </button>
-      <button onclick=\"go('boutique')\" id="nav-btn-boutique" class="flex flex-col items-center text-stone-500 hover:text-brand-maroon">
+      <button onclick="go('boutique')" id="nav-btn-boutique" class="flex flex-col items-center text-stone-500 hover:text-brand-maroon">
         <span class="material-symbols-outlined text-xl">styler</span>
         <span class="text-[10px] font-medium">Boutique</span>
       </button>
-      <button onclick=\"go('torcidas')\" id="nav-btn-torcidas" class="flex flex-col items-center text-stone-500 hover:text-stone-900">
+      <button onclick="go('torcidas')" id="nav-btn-torcidas" class="flex flex-col items-center text-stone-500 hover:text-stone-900">
         <span class="material-symbols-outlined text-xl">sports_soccer</span>
         <span class="text-[10px] font-medium">Torcidas</span>
       </button>
